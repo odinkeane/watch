@@ -1,4 +1,4 @@
-import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, HashRouter, Outlet, Route, Routes } from 'react-router-dom';
 import './App.css';
 import { loremIpsum } from 'lorem-ipsum';
 import { Link } from 'react-router-dom';
@@ -349,7 +349,7 @@ function App() {
   return (
     <>
       {isLoaded &&
-        <BrowserRouter>
+        <HashRouter>
           <LeftPanel />
           <FilmContext.Provider value={filmsInterface}>
             <main>
@@ -362,7 +362,7 @@ function App() {
               </Routes>
             </main>
           </FilmContext.Provider >
-        </BrowserRouter>
+        </HashRouter>
       }
     </>
   );
